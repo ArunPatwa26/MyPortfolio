@@ -1,8 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faMapMarkerAlt, faPhone, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
-import myResume from '../assets/myResume.pdf'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDownload,
+  faMapMarkerAlt,
+  faPhone,
+  faEnvelope,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import myResume from "../assets/myResume.pdf";
 
 export default function AboutMe() {
   const fadeInUp = {
@@ -14,20 +20,23 @@ export default function AboutMe() {
     visible: {
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const personalInfo = [
     { icon: faUser, label: "Name", value: "Arun Patwa" },
     { icon: faEnvelope, label: "Email", value: "arunpatwa2605@gmail.com" },
     { icon: faMapMarkerAlt, label: "From", value: "Mumbai, Thane" },
-    { icon: faPhone, label: "Phone", value: "9136189052" }
+    { icon: faPhone, label: "Phone", value: "9136189052" },
   ];
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section
+      id="about"
+      className="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <motion.div
@@ -68,7 +77,7 @@ export default function AboutMe() {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <motion.div 
+              <motion.div
                 className="absolute -bottom-6 -right-6 bg-blue-500 dark:bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -92,40 +101,43 @@ export default function AboutMe() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.h3 
+            <motion.h3
               className="text-2xl sm:text-3xl font-semibold mb-6 text-gray-800 dark:text-white"
               variants={fadeInUp}
             >
               Who am I?
             </motion.h3>
-            
-            <motion.p 
+
+            <motion.p
               className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-base sm:text-lg"
               variants={fadeInUp}
             >
-              A passionate <span className="text-blue-500 dark:text-blue-400 font-medium">Web Developer</span> with a knack for
-              creating visually appealing and user-friendly web applications. I
-              specialize in crafting responsive designs, clean code architecture,
-              and seamless user experiences.
+              A passionate{" "}
+              <span className="text-blue-500 dark:text-blue-400 font-medium">
+                Web Developer
+              </span>{" "}
+              with a knack for creating visually appealing and user-friendly web
+              applications. I specialize in crafting responsive designs, clean
+              code architecture, and seamless user experiences.
             </motion.p>
-            
-            <motion.p 
+
+            <motion.p
               className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-base sm:text-lg"
               variants={fadeInUp}
             >
               When I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or enjoying outdoor activities.
-              I believe in continuous learning and staying updated with the latest
-              industry trends to deliver cutting-edge solutions.
+              contributing to open-source projects, or enjoying outdoor
+              activities. I believe in continuous learning and staying updated
+              with the latest industry trends to deliver cutting-edge solutions.
             </motion.p>
 
             {/* Personal Info Grid */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8"
               variants={staggerContainer}
             >
               {personalInfo.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-center bg-gray-50 dark:bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
                   variants={fadeInUp}
@@ -135,8 +147,12 @@ export default function AboutMe() {
                     <FontAwesomeIcon icon={item.icon} />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-700 dark:text-gray-300">{item.label}</div>
-                    <div className="text-gray-600 dark:text-gray-400">{item.value}</div>
+                    <div className="font-semibold text-gray-700 dark:text-gray-300">
+                      {item.label}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400">
+                      {item.value}
+                    </div>
                   </div>
                 </motion.div>
               ))}
