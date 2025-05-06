@@ -14,13 +14,16 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
     "@tailwindcss/vite": "^4.1.5",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "framer-motion": "^12.9.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-intersection-observer": "^9.16.0"
+    "react-intersection-observer": "^9.16.0",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

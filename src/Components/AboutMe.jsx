@@ -8,7 +8,7 @@ import {
   faEnvelope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import myResume from "../assets/myResume.pdf";
+
 
 export default function AboutMe() {
   const fadeInUp = {
@@ -158,16 +158,7 @@ export default function AboutMe() {
               ))}
             </motion.div>
 
-            <motion.div variants={fadeInUp}>
-              <a
-                href={myResume}
-                download
-                className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <FontAwesomeIcon icon={faDownload} className="mr-2" />
-                Download CV
-              </a>
-            </motion.div>
+            
           </motion.div>
         </div>
       </div>
